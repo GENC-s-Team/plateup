@@ -1,9 +1,10 @@
 import { type NextRequest } from 'next/server'
-import { updateSession } from '@/utils/superbase/middleware"
+import { updateSession } from '@/utils/superbase/middleware'
 
 export async function middleware(request: NextRequest) {
   return await updateSession(request)
 }
+
 
 export const config = {
   matcher: [
