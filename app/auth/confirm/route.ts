@@ -24,5 +24,5 @@ export async function GET(request: NextRequest) {
   }
 
   // redirect the user to an error page with some instructions
-  redirect('/error')
+  redirect('/error?error=code%20is%20invalid');
 }
