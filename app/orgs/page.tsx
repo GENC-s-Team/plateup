@@ -1,4 +1,5 @@
 import { createClient } from '@/utils/supabase/server'
+import { UpdateOrg } from './components/UpdateOrgForm';
 
 
 async function OrganizationPage(){
@@ -17,7 +18,7 @@ async function OrganizationPage(){
 
     <ul>
         {organizations?.map((org) => (
-          <li key={org.id}>{org.name} - {org.address} - {org.city} - {org.state_region} </li>
+          <li key={org.id}>{org.name} - {org.address} - {org.city} - {org.state_region} <UpdateOrg organization={org}/> </li>
         ))}
       </ul>
     

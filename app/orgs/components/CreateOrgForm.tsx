@@ -42,7 +42,3 @@ export function CreateOrg(){
         
 }
 
-
-export function UpdateOrg(){
-    return <> <p>Update </p> </>
-}

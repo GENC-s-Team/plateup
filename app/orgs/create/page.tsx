@@ -1,4 +1,4 @@
-import { CreateOrg } from "@/app/orgs/components/Form"
+import { CreateOrg } from "@/app/orgs/components/CreateOrgForm"
 
 
 function CreateOrgPage (){
