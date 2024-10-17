@@ -1,6 +1,6 @@
 "use client"
 
-import { APIProvider, useMapsLibrary } from "@vis.gl/react-google-maps";
+import {  useMapsLibrary } from "@vis.gl/react-google-maps";
 
 import { useRef, useState, useEffect } from "react";
 
@@ -37,11 +37,10 @@ const GoogleSearchBox = ({ onPlaceSelect }: Props) => {
 
   return (
   
-      <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}>
         <div className="autocomplete-container flex justify-center align-middle m-10">
           <input ref={inputRef} />
         </div>
-      </APIProvider>
+
 
   );
 };
