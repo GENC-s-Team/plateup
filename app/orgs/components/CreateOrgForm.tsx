@@ -1,4 +1,4 @@
-import { createOrgAction } from "../action/action"
+import { createOrgAction } from "./action/action"
 
 export function CreateOrg(){
      

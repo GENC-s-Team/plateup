@@ -1,4 +1,4 @@
-import { loginAction } from "@/app/(auth)/actions/actions";
+import { loginAction } from "@/app/(auth)/components/actions/actions";
 import Link from "next/link";
 
 export default function LoginForm() {
