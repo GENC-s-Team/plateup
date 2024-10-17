@@ -26,14 +26,12 @@ export function UpdateOrg({ organization }: { organization: any }) {
 
   return (
     <>
-      <p>Update </p>
+      <p>Update the organization information </p>
 
       <button onClick={onclickModal}>Open</button>
 
       {showModel && (
-        <form>
-          <h2>Update Organization</h2>
-
+        <form className="flex flex-col m-5 justify-start gap-10 text-blue-300">
           <label>
             Name:
             <input
