@@ -2,6 +2,7 @@ import { createClient } from '@/utils/supabase/server'
 import { UpdateOrg } from './components/UpdateOrgForm';
 
 
+
 async function OrganizationPage(){
 
     const supabase = createClient()
@@ -14,13 +15,12 @@ async function OrganizationPage(){
     return <> 
     
     <p> Organization Page</p>
-
-
-    <ul>
+    {/* <ul>
         {organizations?.map((org) => (
           <li key={org.id}>{org.name} - {org.address} - {org.city} - {org.state_region} <UpdateOrg organization={org}/> </li>
         ))}
-      </ul>
+      </ul> */}
+
     
     </>
 }

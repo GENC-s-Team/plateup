@@ -52,4 +52,14 @@ export async function createOrgAction(formData: FormData) {
   if (error) {
     console.log(error);
   }
+
+  revalidatePath("/")
 }
+
+// Get Google API KEY from Server Side
+
+export const getGoogleAPIKey = async () => {
+  return process.env.GOOGLE_MAPS_API_KEY
+}
+
+
