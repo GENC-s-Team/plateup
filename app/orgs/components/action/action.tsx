@@ -53,13 +53,28 @@ export async function createOrgAction(formData: FormData) {
     console.log(error);
   }
 
-  revalidatePath("/")
+  revalidatePath("/");
+}
+
+export async function GeoCoding(address: string) {
+  const apiLink = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+`;
+
+  try {
+    const response = await fetch(apiLink);
+
+    // Check if the response is ok (status code 200)
+    if (!response.ok) {
+      throw new Error(`Error fetching geocoding data: ${response.statusText}`);
+    }
+
+    const result = await response.json();
+    return result; // or return specific data as needed
+  } catch (error) {
+    console.error("Geocoding error:", error);
+    // Handle the error accordingly, e.g., return an error response
+    return { error: error }; // or throw error to be handled by the caller
+  }
 }
 
 // Get Google API KEY from Server Side
-
-export const getGoogleAPIKey = async () => {
-  return process.env.GOOGLE_MAPS_API_KEY
-}
-
-

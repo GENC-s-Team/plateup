@@ -11,6 +11,9 @@ const testPage = () => {
     const [selectedPlace, setSelectedPlace] =
     useState<google.maps.places.PlaceResult | null>(null);
 
+
+    console.log(selectedPlace?.formatted_address)
+
     return <>
 
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}>
