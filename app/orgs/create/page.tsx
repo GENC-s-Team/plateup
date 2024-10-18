@@ -1,8 +1,8 @@
 "use client";
 
-import BasicInfo from "@/app/orgs/components/createPage/BasicInformation";
+import BasicInfo from "@/app/orgs/components/OrgsInit/BasicInformation";
 import { useState } from "react";
-import AddressInfo from "../components/createPage/AddressInformation";
+import AddressInfo from "../components/OrgsInit/AddressInformation";
 
 
 interface BasicInformation {
