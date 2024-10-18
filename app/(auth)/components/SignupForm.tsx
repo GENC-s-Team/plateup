@@ -1,4 +1,4 @@
-import {signupAction } from "@/app/(auth)/actions/actions";
+import {signupAction } from "@/app/(auth)/components/actions/actions";
 import Link from "next/link";
 
 export default function SignUpForm() {
