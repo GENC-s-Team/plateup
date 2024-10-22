@@ -1,8 +1,10 @@
 "use client";
 
 import BasicInfo from "@/app/orgs/components/InitOrgs/BasicInfo";
+// import ContactInfo from "@/app/orgs/components/InitOrgs/ContactInfo";
 import { useState } from "react";
 import AddressInfo from "../components/InitOrgs/AddressInfo";
+import ContactInfo from "../components/InitOrgs/ContactInfo";
 
 
 interface BasicInformation {
@@ -14,7 +16,7 @@ interface ContactInformation {
   primaryContactName: string; // Name of the primary contact person
   email: string; // Email address
   phoneNumber: string; // Phone number
-  websieLink: string;
+  websiteLink: string;
 }
 
 interface AddressInformation {
@@ -64,6 +66,13 @@ function CreateOrgPage() {
     region: '',
   });
 
+  const [contactInfo, setContactInfo] = useState<ContactInformation>({
+    primaryContactName: '',
+    email: '',
+    phoneNumber: '',
+    websiteLink: '',
+  });
+
   const [currentPanelIndex, setCurrentPanelIndex] = useState<number>(0);
 
   // Function to handle panel change to the next panel
@@ -85,11 +94,11 @@ const renderPanel = () => {
     switch (panelsArr[currentPanelIndex]) {
         case "basicInfo":
             return <BasicInfo onInfoChange={setInfo} info={basicInfo} onNext ={onChangePanelNext}  />;
-        case "contact":
-            // Return <ContactInfo onInfoChange={setContactInfo} 
-            break;
         case "address":
             return <AddressInfo onInfoChange={setAddressInfo} info={addressInfo} onNext ={onChangePanelNext} onBack= {onChangePanelBack}/>
+            break;
+        case "contact":
+            return <ContactInfo onInfoChange={setContactInfo}  info={contactInfo} onNext={onChangePanelNext} onBack={onChangePanelBack}/>;
             break;
         case "services":
             // Return <ServicesOffered onInfoChange={setServices} /> when implemented
