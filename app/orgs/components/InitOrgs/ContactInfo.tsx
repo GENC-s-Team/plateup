@@ -88,7 +88,7 @@ export default function ContactInfo({ onInfoChange, info, onBack, onNext }: Cont
                 />
             </form>
 
-            <div className="flex justify-between mt-4">
+            <div className="flex mt-4">
                 <button
                     type="button"
                     onClick={onBack} // Call the onBack function
@@ -98,7 +98,7 @@ export default function ContactInfo({ onInfoChange, info, onBack, onNext }: Cont
                 </button>
                 <button
                     type="button"
-                    onClick={onNext} // Call the onNext function
+                    onClick={onNext} // Call the onNext function (wait until service is implemented)
                     className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-200"
                 >
                     Next

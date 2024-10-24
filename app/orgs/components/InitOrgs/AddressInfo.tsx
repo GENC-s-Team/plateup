@@ -180,6 +180,7 @@ export default function AddressInfo({
       </button>
       <button
         type="button"
+        //onClick={onClickNext} // (we need to find out a way to implement this and the onNext function, right now it doesn't produce the correct address section)
         onClick={onNext} // Call the onNext function
         className="mt-4 bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-200"
       >
