@@ -1,6 +1,5 @@
 import { loginAction } from "@/app/(auth)/actions/actions";
 import Link from "next/link";
-import plateup_logo from "../public/imgs/plateup_logo.webp"
 
 export default function LoginForm() {
   return (
@@ -18,9 +17,9 @@ export default function LoginForm() {
                         <label htmlFor="password">Password</label>
                         <input className="w-full rounded-md ring-1 ring-inset ring-gray-300 focus:ring-inset focus:ring-black py-2.5 px-3" id="password" name="password" type="password" required />
                     </div>
-                    <div className="flex flex-col items-center gap-6">
+                    <div className="flex flex-col items-center">
                         <button className="w-full bg-secondary hover:bg-accent text-white font-bold transition duration-200 ease-in-out py-2 px-4 rounded" formAction={loginAction}>Log in</button>
-                        <span className="text-sm font-normal">New to Plateup? <Link className="text-sm font-bold text-gradient text-gradient-solid" href="/signup">Create Account</Link></span>
+                        <span className="text-sm font-normal pt-10">New to Plateup? <Link className="text-sm font-bold text-gradient text-gradient-solid" href="/signup">Create Account</Link></span>
                     </div>
                   </form>
               </div>
